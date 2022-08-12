@@ -8,7 +8,13 @@ namespace ClassLibrary_TDD
 {
     public class Usuario
     {
+        public int Id { get; set; } 
+     
         public string Nome { get; set; }
+        
+        public string UserName { get; set; }
+        
+        public string Email { get; set; }
 
         public int Idade { get; set; }
 
@@ -19,11 +25,15 @@ namespace ClassLibrary_TDD
 
         }
 
-        public Usuario(string nome, int idade)
+        public Usuario(string nome, int idade, string username = "", string email = "")
         {
             Nome = nome;
 
             Idade = idade;
+            
+            UserName = username;
+
+            Email = email;
         }
 
         public bool MaiordeIdade()
